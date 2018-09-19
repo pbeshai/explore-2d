@@ -164,7 +164,6 @@ function drawPoint(ctx, point, radius, stroke) {
 }
 
 function render() {
-  // console.warn('RENDER', transform);
   // update the highlight transform
   gZoom.attr('transform', transform);
 
@@ -203,7 +202,7 @@ function render() {
   // draw each point
   if (activePoints && activePoints.length) {
     for (let i = 0; i < activePoints.length; ++i) {
-      drawPoint(ctx, points[i], radius * 2, true);
+      drawPoint(ctx, activePoints[i], radius * 2, true);
     }
   }
 
@@ -319,7 +318,6 @@ function applyFilters() {
   } else {
     activePoints = filteredPoints;
   }
-
   initializeVoronoi();
 }
 
