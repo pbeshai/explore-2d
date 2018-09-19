@@ -15,6 +15,11 @@ const glow = true;
 
 /** Configuration for reading from points  */
 let colorKey = 'cluster';
+
+function getPointsFromData(data) {
+  return data.points;
+}
+
 function getX(point) {
   return point.position[0];
 }
@@ -29,9 +34,9 @@ function getHtml(point) {
     .map(
       key =>
         `<div class='point-prop'>
-      <div class='point-prop-label'>${key}</div>
-      <div class='point-prop-value'>${point[key]}</div>
-    </div>`
+          <div class='point-prop-label'>${key}</div>
+          <div class='point-prop-value'>${point[key]}</div>
+        </div>`
     )
     .join('\n');
 
@@ -230,13 +235,13 @@ function highlight(point) {
 }
 
 function initializeVoronoi() {
-  const voronoipoints =
+  const voronoiPoints =
     activePoints && activePoints.length ? activePoints : points;
   try {
     voronoiDiagram = d3
       .voronoi()
       .x(d => xScale(getX(d)) + Math.random() / 100)
-      .y(d => yScale(getY(d)) + Math.random() / 100)(voronoipoints);
+      .y(d => yScale(getY(d)) + Math.random() / 100)(voronoiPoints);
   } catch (e) {
     console.error('Error running voronoi', e);
     canvas.on('mousemove', null);
@@ -368,7 +373,7 @@ function loadedData(error, data) {
   d3.select('.loading').remove();
   allData = data;
   console.log('Loaded data', allData);
-  points = data.points;
+  points = getPointsFromData(data);
   initializeScales();
   initializeVoronoi();
 
