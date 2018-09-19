@@ -1,0 +1,21 @@
+{
+  "points": [
+    { "position": [0, 0], "cluster": "c1" },
+    { "position": [0, 3], "cluster": "c1" },
+    { "position": [1, 2], "cluster": "c1" },
+    { "position": [2, 1], "cluster": "c1" },
+    { "position": [10, 50], "cluster": "c2" },
+    { "position": [11, 55], "cluster": "c2" },
+    { "position": [12, 60], "cluster": "c2" },
+    { "position": [11, 59], "cluster": "c2" },
+    { "position": [14, 53], "cluster": "c2" },
+    { "position": [9, 61], "cluster": "c2" },
+    { "position": [30, 32], "cluster": "c3" },
+    { "position": [32, 40], "cluster": "c3" },
+    { "position": [34, 38], "cluster": "c3" },
+    { "position": [28, 27], "cluster": "c3" },
+    { "position": [15, 20], "cluster": "c4" },
+    { "position": [18, 25], "cluster": "c4" },
+    { "position": [17, 24], "cluster": "c4" }
+  ]
+}

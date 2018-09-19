@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title>2D Explorer</title>
+  <link href="bootstrap-reboot.css" rel="stylesheet" />
+  <link href="dist_main.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="main-container">
+    <div class="controls">
+      <div class="form-controls">
+        <div class="form-control">
+          <label>
+            Search
+          </label>
+          <input type="text" id="substring-search" />
+        </div>
+      </div>
+    </div>
+    <div class="dataset-selector-control"></div>
+    <canvas id="main-canvas"></canvas>
+    <svg id="highlight-svg"></svg>
+    <div class="displayed-point" style="opacity: 0"></div>
+  </div>
+	<script src="https://d3js.org/d3.v4.js"></script>
+  <script src="dist_script.js"></script>
+	<!-- <script src="script.js"></script> -->
+</body>
+</html>
